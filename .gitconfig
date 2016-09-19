@@ -1,0 +1,19 @@
+[user]
+	name = Alexis Brunet
+	email = alexis.brunet@youi.tv
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+        st = status
+        lg = log -p
+	k = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	in = ! git fetch && git log --pretty=short HEAD..origin
+	out = log --pretty=short origin..HEAD
+        unstage = reset HEAD
+        branch-name = "!git rev-parse --abbrev-ref HEAD"
+        po = "!git push -u origin $(git branch-name)"
+        delete-merged-branches = "!git co develop && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+[status]
+	submoduleSummary = true
