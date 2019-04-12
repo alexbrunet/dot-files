@@ -6,6 +6,8 @@
 	br = branch
 	ci = commit
         st = status
+        fu = fetch upstream
+        su = submodule update
         lg = log -p
 	k = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lsd = log --graph --decorate --pretty=oneline --abbrev-commit --all
